@@ -8,8 +8,8 @@ var app = module.exports = express.Router();
 // XXX: This should be a database of users :).
 var users = [{
   id: 1,
-  username: 'gonto',
-  password: 'gonto'
+  username: 'chuck',
+  password: 'norris'
 }];
 
 function createToken(user) {
@@ -17,6 +17,8 @@ function createToken(user) {
 }
 
 function getUserScheme(req) {
+  
+  console.log(req.body);
   
   var username;
   var type;
