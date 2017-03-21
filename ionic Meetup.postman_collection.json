@@ -1,0 +1,127 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ionic Meetup",
+		"_postman_id": "65af45a3-4562-6416-9a27-c67ebb883eda",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Random quote zonder inloggen",
+			"request": {
+				"url": "http://localhost:3001/api/random-quote",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Random quote mét inloggen",
+			"request": {
+				"url": "http://localhost:3001/api/protected/random-quote",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "//Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZW1haWwiOiJjaHVja0BjaHVjay5jb20iLCJpYXQiOjE0OTAwMzcxMzYsImV4cCI6MTQ5MDA1NTEzNn0.BTvKeamqrRi4e3xsyFLf1fCnYaZ3t_PyBEb0f5ioXZw",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "chuck",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "norris",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "User aanmaken",
+			"request": {
+				"url": "http://localhost:3001/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "chuck",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "norris",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "User inloggen",
+			"request": {
+				"url": "http://localhost:3001/sessions/create",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "chuck@chuck.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "norris",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
